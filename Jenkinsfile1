@@ -25,8 +25,8 @@ pipeline {
             steps {
                 sshagent(credentials: ['ubuntu-ssh']) {
                     sh """
-                        scp -o StrictHostKeyChecking=no target/java_web_app-1.0-SNAPSHOT.jar ubuntu@54.145.4.146:/home/ubuntu/myapp/
-                        ssh -o StrictHostKeyChecking=no ubuntu@54.145.4.146 'bash /home/ubuntu/myapp/start.sh'
+                        scp -o StrictHostKeyChecking=no target/java_web_app-1.0-SNAPSHOT.jar ubuntu@3.94.196.129:/home/ubuntu/myapp/
+                        ssh -o StrictHostKeyChecking=no ubuntu@3.94.196.129   'bash /home/ubuntu/myapp/start.sh'
                     """
                 }
             }
